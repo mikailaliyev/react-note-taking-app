@@ -8,28 +8,23 @@ body {
 .main-note {
   display: flex;
   flex-direction: column;
-
   justify-content: center;
   align-items: center;
-  margin-top: 8%;
+  margin-top: 10%;
 }
-.note-header {
-  min-width: 20%;
-  outline: none;
-}
+
 .note-text {
   resize: none;
   min-width: 20%;
+  height: 10em;
   outline: none;
+  font-size: 150%;
 }
 
-.note-buttons {
-  display: flex;
-}
-
-.note-add-button,
-.note-delete-button {
-  padding: 5%;
+.note-add-button {
+  margin-top: 0.5%;
+  padding: 1%;
+  font-size: large;
   background-color: midnightblue;
   color: white;
   border-radius: 5px;
