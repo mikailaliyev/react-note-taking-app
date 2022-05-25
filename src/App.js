@@ -3,21 +3,35 @@ import { useState } from "react";
 
 function App() {
   const [text, setText] = useState("");
+  const [header, setHeader] = useState("");
+  const items = Object.keys({ ...localStorage });
+
   const handleClick = () => {
     if (!text) {
       return;
     }
-    localStorage.setItem(new Date().toUTCString(), text);
+    localStorage.setItem(header, text);
     setText("");
+    setHeader("");
   };
   return (
     <div className="main-note">
       <h1>Notes</h1>
-      <h2>{localStorage.getItem("Tue, 24 May 2022 19:42:26 GMT")}</h2>
+      {items.map((i) => (
+        <p key={i}>{i}</p>
+      ))}
+      <input
+        autoFocus
+        value={header}
+        type="text"
+        className="note-header"
+        placeholder="Enter note's title"
+        onChange={(e) => setHeader(e.target.value)}
+      />
       <textarea
         value={text}
         className="note-text"
-        placeholder="Enter your note here"
+        placeholder="Enter note here"
         onChange={(e) => setText(e.target.value)}
       ></textarea>
       <button className="note-add-button" onClick={handleClick}>

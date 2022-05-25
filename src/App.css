@@ -3,22 +3,44 @@ body {
   margin: 0;
   padding: 0;
   overflow: hidden;
+  box-sizing: border-box;
 }
 
 .main-note {
+  margin-top: 10%;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 10%;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+.note-header {
+  max-width: 20%;
+  min-width: 20%;
+  outline: none;
+  border-color: midnightblue;
+  margin: 1%;
+  border-radius: 3px;
+  border-width: 2px;
+  font-size: 1em;
+  padding: 0.5%;
+  box-sizing: border-box;
 }
 
 .note-text {
   resize: none;
+  max-width: 20%;
   min-width: 20%;
   height: 10em;
   outline: none;
   font-size: 150%;
+  border-color: midnightblue;
+  border-radius: 3px;
+  border-width: 2px;
+  font-size: 1.5em;
+  padding: 0.5%;
+  box-sizing: border-box;
 }
 
 .note-add-button {
