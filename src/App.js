@@ -18,13 +18,6 @@ function App() {
   return (
     <div className="main-note">
       <h1>Notes</h1>
-
-      <input
-      className="note-title"
-        type="text"
-        value={header}
-        onChange={(e) => setHeader(e.target.value)}
-      />
       {items.map((i) => (
         <p key={i}>{i}</p>
       ))}
