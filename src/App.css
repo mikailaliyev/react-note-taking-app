@@ -13,9 +13,15 @@ body {
   margin-top: 10%;
 }
 
+.note-title {
+  min-width: 20%;
+  max-width: 20%;
+}
+
 .note-text {
   resize: none;
   min-width: 20%;
+  max-width: 20%;
   height: 10em;
   outline: none;
   font-size: 150%;
