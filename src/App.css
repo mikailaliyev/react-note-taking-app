@@ -6,6 +6,11 @@ body {
   box-sizing: border-box;
 }
 
+.container {
+  display: flex;
+  flex-direction: row;
+}
+
 .main-note {
   margin-top: 10%;
   display: flex;
